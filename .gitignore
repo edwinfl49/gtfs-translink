@@ -1,0 +1,7 @@
+.vscode/
+samples/
+static/
+csv/
+*.pb
+*.csv
+*.zip
