@@ -39,7 +39,7 @@ def insert_values(conn:psycopg2.extensions.connection, updates:Iterator[Dict[str
         psycopg2.extras.execute_values(
             cursor,
             "INSERT INTO position_update VALUES %s;",
-            ((uuid_key(values=[update["id"], update["trip_id"], update["trip_direction_id"]]),
+            ((str(uuid_key(values=[update["id"], update["trip_id"], update["trip_direction_id"]])),
             update["id"],
             update["trip_id"],
             update["trip_start_date"],
